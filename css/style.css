@@ -17,6 +17,7 @@
     border: 2px solid #e7e7e7;
     border-radius: 4px;
     padding: 1rem;
+    background-color: white;
 }
 
 .project-card img {
@@ -33,6 +34,7 @@ html {
 body {
     margin-top: 120px !important;
     margin-bottom: 120px !important;
+    background-image: linear-gradient(to right, #CEE5F2, #ACCBE1);
 }
 
 .me {
