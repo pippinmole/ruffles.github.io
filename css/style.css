@@ -20,6 +20,13 @@
     background-color: white;
 }
 
+.grow {
+    transition: transform .2s ease-in-out;
+}
+.grow:hover {
+    transform: translateY(-10px);
+}
+
 .project-card img {
     width: 100%;
     border-radius: 5px;
