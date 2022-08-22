@@ -1,0 +1,128 @@
+{{ define "main" }}
+
+<img src="./img/me.jpg" class="me fade-2 mr-3"/>
+
+<h2 class="fade-2" style="padding: 50px 0; font-weight: bold;">Hi, I'm Jonathan 👋</h2>
+
+<a href="./assets/curriculum_vitae.pdf" target="_blank">
+    <button type="button" style="margin-bottom: 50px;" class="btn btn-primary fade-2">📄 View my CV</button>
+</a>
+
+<div class="text-left">
+    <dl class="row">
+        <dt class="col-sm-3 fade-2">Name</dt>
+        <dd class="col-sm-9 fade-2">Jonathan Ruffles</dd>
+        <dt class="col-sm-3 fade-2 text-truncate">Age</dt>
+        <dd class="col-sm-9 fade-2">18 years old</dd>
+        <dt class="col-sm-3 fade-2">Studying</dt>
+        <dd class="col-sm-9 fade-2">Computer Science at the University of Sheffield (UK)</dd>
+        <dt class="col-sm-3 fade-2">Technologies</dt>
+        <dd class="col-sm-9 fade-2">ASP.NET Core, Unity, NodeJS, Web JavaScript, CSS, Python, Git, MongoDB, SQLite</dd>
+    </dl>
+</div>
+
+<div>
+    <a href="https://twitter.com/pippinmole" class="fa fa-3x fa-twitter fade-2" style="color: #1da1f2" target="_blank"></a>
+    <a href="https://www.youtube.com/channel/UCROWCHDgV1bgbZvBgKu6yzA" class="fa fa-3x fa-youtube fade-2" style="color: #FF0000" target="_blank"></a>
+    <a href="https://www.github.com/pippinmole/" class="fa fa-3x fa-github fade-2" target="_blank"></a>
+    <!--<a href="#" class="fa fa-2x fa-linkedin" target="_blank"></a>
+    <a href="#" class="fa fa-2x fa-instagram" target="_blank"></a>-->
+</div>
+
+<div class="m-md-5">
+    <h3 class="p-2 fade-2">📝 About me</h3>
+</div>
+
+<div class="fade-2">
+
+    <ul style="text-align: left;">
+        <li>I like playing games</li>
+        <li>I like making games</li>
+        <li>I like using the web</li>
+        <li>I like making web apps</li>
+        <li>Tea, not coffee</li>
+    </ul>
+
+</div>
+
+<div class="m-md-5">
+    <h3 class="p-2 fade-2">🔬 My Projects</h3>
+</div>
+
+<div class="project-button text-center project-cards">
+    <div class="project-card fade-2 grow">
+        <img src="./img/illusive-screenshot.png" width="100%" />
+        <h3 class="d-inline align-middle">
+            Illusive
+        </h3>
+        <div>Status: <span style="color: darkorange">In Progress</span></div>
+        <div>
+            <a class="fa fa-lg fa-external-link-square" href="https://forum.ruffles.pw/" target="_blank" aria-hidden="true"></a>
+            <a class="fa fa-lg fa-github" href="https://github.com/pippinmole/Illusive" target="_blank" aria-hidden="true"></a>
+        </div>
+        
+        <div class="project-content">
+            A forum website made on the ASP.NET Core framework using Razor pages (an alternative to ASP.NET Core's MVC design pattern), which allows for a simpler bridge between back-end and front-end data.
+        </div>
+    </div>
+
+    <div class="project-card fade-2 grow">
+        <img src="./img/decay-game-screenshot.png" width="100%" />
+        <h3 class="d-inline align-middle">
+            Decay
+        </h3>
+        <div>Status: <span style="color: darkorange">In Progress</span></div>
+        <div>
+<!--                    <a class="fa fa-lg fa-external-link-square" href="https://forum.ruffles.pw/" target="_blank" aria-hidden="true"></a>-->
+            <a class="fa fa-lg fa-github" href="https://github.com/pippinmole/Decay" target="_blank" aria-hidden="true"></a>
+        </div>
+
+        <div class="project-content">
+            A 3D multiplayer survival game 
+        </div>
+    </div>
+    
+    <div class="project-card fade-2 grow">
+        <img src="./img/wsbt-website-screenshot.png" width="100%" />
+        <h3 class="d-inline align-middle">
+            WallStreetBets Token
+        </h3>
+        <div>Status: <span style="color: green">Complete (Legacy)</span></div>
+        <div>
+            <a class="fa fa-lg fa-globe" href="https://wsbtbros.com/" target="_blank" aria-hidden="true"></a>
+        </div>
+
+        <div class="project-content">
+            A website built on the Hugo static webpage framework, running from a GitHub repository. WSBT is an BEP-20 crypto token born from the WallStreetBets reddit short on $GME.
+        </div>
+    </div>
+    <div class="project-card fade-2 grow">
+        <img src="./img/getchain-website-screenshot.png" width="100%" />
+        <h3 class="d-inline align-middle">
+            GetChain
+        </h3>
+        <div>Status: <span style="color: green">Complete</span></div>
+        <div>
+            <a class="fa fa-lg fa-globe" href="https://getchain.dev/" target="_blank" aria-hidden="true"></a>
+        </div>
+
+        <div class="project-content">
+            A website that aggregates multiple blockchain APIs into a single API endpoint. Built using ASP.NET Core's Razor Pages, with a built in REST WebAPI.
+        </div>
+    </div>
+    <div class="project-card fade-2 grow">
+        <img src="./img/fusionkart-screenshot.png" width="100%" />
+        <h3 class="d-inline align-middle">
+            Fusion Kart
+        </h3>
+        <div>Status: <span style="color: green">Complete</span></div>
+        <div>
+            <a class="fa fa-lg fa-globe" href="https://doc.photonengine.com/en-us/fusion/current/samples/fusion-karts" target="_blank" aria-hidden="true"></a>
+            <a class="fa fa-lg fa-youtube" href="https://www.youtube.com/watch?v=mPETzWqTfSw" target="_blank" aria-hidden="true"></a>
+        </div>
+        <div class="project-content">
+            A multiplayer kart game made in Unity, using <a href="https://doc.photonengine.com/en-us/fusion/">Photon Fusion</a> networking package. My job was to write the netcode.
+        </div>
+    </div>
+</div>
+{{ end }}
