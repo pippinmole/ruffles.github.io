@@ -1,5 +1,12 @@
 {{ define "main" }}
 
-This is the definition of 'main' of a project
+{{ with .Params.HeadImage }}
+    <img style="max-height: 350px;" class="mt-2" src="{{.}}" />
+{{ end }}
+
+<main role="main" class="pb-3 mt-5">
+    {{/*  This is the definition of 'main' of a project (layouts/project/single.html)  */}}
+    {{ .Content }}
+</main>
 
 {{ end }}

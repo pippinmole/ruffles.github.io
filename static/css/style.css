@@ -29,6 +29,10 @@
     transform: translateY(-10px) rotate(0.58deg);
 }
 
+.cursor-pointer {
+    cursor: pointer;
+  }
+
 .project-card img {
     width: 100%;
     border-radius: 5px;
@@ -41,7 +45,7 @@ html {
 }
 
 body {
-    margin-top: 240px !important;
+    /* margin-top: 240px !important; */
     margin-bottom: 120px !important;
     /* background-image: linear-gradient(to right, #202020, #ACCBE1); */
     background-color: #202020 !important;
