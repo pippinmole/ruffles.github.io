@@ -4,7 +4,7 @@
 
         <h2 class="fade-2" style="padding: 50px 0; font-weight: bold;">Hi, I'm Jonathan 👋</h2>
 
-        <a href="./assets/curriculum_vitae.pdf" target="_blank">
+        <a href="/cv.pdf" target="_blank">
             <button type="button" style="margin-bottom: 50px;" class="btn btn-primary fade-2">📄 View my CV</button>
         </a>
 
@@ -51,18 +51,20 @@
 
             {{ range  ( where .Site.RegularPages "Type" "project" ) }}
                 <div class="project-card fade-2 grow cursor-pointer" onclick="window.location='{{ .Permalink }}'">
-                    <img src="./img/illusive-screenshot.png" width="100%" />
+                    <img src="{{ .Params.headImage }}" width="100%" />
                     <h3 class="d-inline align-middle">
                         {{ .Title }}
                     </h3>
-                    <div>Status: <span style="color: darkorange">In Progress</span></div>
+                    <div>
+                        Status: <span style="color: darkorange">{{ .Params.status }}</span>
+                    </div>
                     <div>
                         <a class="fa fa-lg fa-external-link-square" href="https://forum.ruffles.pw/" target="_blank" aria-hidden="true"></a>
                         <a class="fa fa-lg fa-github" href="https://github.com/pippinmole/Illusive" target="_blank" aria-hidden="true"></a>
                     </div>
                     
                     <div class="project-content">
-                        {{ .Summary }}
+                        {{ .Params.summary }}
 
                         {{/*  A forum website made on the ASP.NET Core framework using Razor pages (an alternative to ASP.NET Core's MVC design pattern), which allows for a simpler bridge between back-end and front-end data.  */}}
                     </div>

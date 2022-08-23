@@ -44,6 +44,10 @@ html {
     overflow-y: scroll;
 }
 
+.project-content {
+    text-align: left !important;
+}
+
 body {
     /* margin-top: 240px !important; */
     margin-bottom: 120px !important;
