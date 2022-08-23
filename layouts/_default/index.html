@@ -13,7 +13,7 @@
                 <dt class="col-sm-3 fade-2">Name</dt>
                 <dd class="col-sm-9 fade-2">Jonathan Ruffles</dd>
                 <dt class="col-sm-3 fade-2 text-truncate">Age</dt>
-                <dd class="col-sm-9 fade-2">18 years old</dd>
+                <dd class="col-sm-9 fade-2">19 years old</dd>
                 <dt class="col-sm-3 fade-2">Studying</dt>
                 <dd class="col-sm-9 fade-2">Computer Science at the University of Sheffield (UK)</dd>
                 <dt class="col-sm-3 fade-2">Technologies</dt>
@@ -48,7 +48,6 @@
         </div>
 
         <div class="project-button text-center project-cards">
-
             {{ range  ( where .Site.RegularPages "Type" "project" ) }}
                 <div class="project-card fade-2 grow cursor-pointer" onclick="window.location='{{ .Permalink }}'">
                     <img src="{{ .Params.headImage }}" width="100%" />
