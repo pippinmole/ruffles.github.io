@@ -8,7 +8,7 @@ featuredpath: "date"
 linktitle: ""
 title: "GetChain"
 slug: "getchain"
-type: "post"
+type: "project"
 
 # headImage: /img/getchain/getchain-website-screenshot.png
 ---

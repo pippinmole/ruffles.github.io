@@ -8,7 +8,7 @@ featuredpath: "date"
 linktitle: ""
 title: "Fusion Karts"
 slug: "fusion karts"
-type: "post"
+type: "project"
 
 # status: In-Progress
 # headImage: /img/fusionkart-screenshot.png

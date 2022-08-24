@@ -8,7 +8,7 @@ featuredpath: "date"
 linktitle: ""
 title: "Decay"
 slug: "decay"
-type: "post"
+type: "project"
 
 
 # status: In-Progress

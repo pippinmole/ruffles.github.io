@@ -8,7 +8,7 @@ featuredpath: "date"
 linktitle: ""
 title: "Illusive"
 slug: "illusive"
-type: "post"
+type: "project"
 
 # status: Complete
 # headImage: /img/illusive/illusive-screenshot.png

@@ -63,9 +63,9 @@ paginate     = 10
 
   # And you can even create generic menu
   [[menu.main]]
-    identifier = "projects"
-    name       = "Projects"
-    url        = "/projects"
+    identifier = "project"
+    name       = "Project"
+    url        = "/project"
 
   [[menu.main]]
     identifier = "Resume"

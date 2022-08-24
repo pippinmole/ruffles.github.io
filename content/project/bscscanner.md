@@ -1,14 +1,14 @@
 ---
 categories: ["Projects"]
 date: "2022-03-25"
-description: "A wrapper library for the BscScan WebAPI, with dependency injection support."
+description: "A C# wrapper library for the BscScan Web API, with dependency injection support."
 featured: "/me.jpg"
 featuredalt: ""
 featuredpath: "date"
 linktitle: ""
 title: "BscScanner"
 slug: "bscscanner"
-type: "post"
+type: "project"
 # cover: "/img/bscscanner/bscscanner.png"
 
 # status: Complete
