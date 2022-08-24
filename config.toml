@@ -48,8 +48,8 @@ paginate     = 10
 [languages]
   [languages.en]
     title = "Hi, I'm Jonathan 👋"
-    subtitle = "A simple theme for Hugo"
-    keywords = ""
+    subtitle = "This is my portfolio site"
+    keywords = "portfolio"
     copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
     readOtherPosts = "Read other posts"
 

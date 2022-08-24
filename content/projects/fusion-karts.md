@@ -1,9 +1,17 @@
 ---
-title: Fusion Karts
-summary: A multiplayer kart game made in Unity, using Photon Fusion networking package. My job was to write the netcode. 
-status: In-Progress
-# content: This is one of the sites containing information about a project I have worked on or am working on.
-headImage: /img/fusionkart-screenshot.png
+categories: ["Projects"]
+date: "2021-12-09"
+description: "A multiplayer kart game made in Unity, using Photon Fusion networking package. My job was to write the netcode. "
+featured: "pic01.jpg"
+featuredalt: ""
+featuredpath: "date"
+linktitle: ""
+title: "Fusion Karts"
+slug: "fusion karts"
+type: "post"
+
+# status: In-Progress
+# headImage: /img/fusionkart-screenshot.png
 ---
 
 
