@@ -1,4 +1,4 @@
-baseURL = 'https://new.ruffles.pw/'
+baseURL = 'https://ruffles.pw/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = "hello-friend-ng"
