@@ -1,0 +1,88 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects on > Hi, I'm Jonathan 👋</title><link>https://new.ruffles.pw/project/</link><description>Recent content in Projects on > Hi, I'm Jonathan 👋</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>&lt;a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0&lt;/a></copyright><lastBuildDate>Fri, 25 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://new.ruffles.pw/project/index.xml" rel="self" type="application/rss+xml"/><item><title>BscScanner</title><link>https://new.ruffles.pw/project/bscscanner/</link><pubDate>Fri, 25 Mar 2022 00:00:00 +0000</pubDate><guid>https://new.ruffles.pw/project/bscscanner/</guid><description>BscScanner is a C# library that encapsulates all Web-API endpoints exposed by BscScan, the explorer that shows transactions on the Binance Smart Chain blockchain. It has been downloaded by 2,100+ people on NuGet.
+The package is split up into 3 packages:
+BscScanner - The core library containing all methods pertaining to the BscScan API BscScanner.Extensions.Convert - A conversion libary to convert BNB to GWEI and back BscScanner.Extensions.DependencyInjection - A dependency injection library that allows users to inject the core library&amp;rsquo;s classes into services.</description><content type="html"><![CDATA[<p>BscScanner is a C# library that encapsulates all Web-API endpoints exposed by <a href="https://docs.bscscan.com/">BscScan</a>, the explorer that shows transactions on the Binance Smart Chain blockchain. It has been downloaded by <strong>2,100+ people</strong> on <a href="https://www.nuget.org/packages/BscScanner">NuGet</a>.</p>
+<p>The package is split up into 3 packages:</p>
+<ul>
+<li><a href="https://www.nuget.org/packages/BscScanner">BscScanner</a> - The core library containing all methods pertaining to the BscScan API</li>
+<li><a href="https://github.com/pippinmole/BscScanner.Extensions.Convert">BscScanner.Extensions.Convert</a> - A conversion libary to convert BNB to <a href="https://academy.binance.com/en/glossary/gwei">GWEI</a> and back</li>
+<li><a href="https://github.com/pippinmole/BscScanner.Extensions.DependencyInjection">BscScanner.Extensions.DependencyInjection</a> - A dependency injection library that allows users to inject the core library&rsquo;s classes into services.</li>
+</ul>
+<p>The choice to split functionality into 3 packages is commonly used in .NET development. Some people may want to use the core package without dependency injection, in something such as a console application, while some may opt into using the Dependency Injection package in an ASP.NET Core application.</p>
+<h3 id="why">Why?</h3>
+<p>Why did I make these packages? At the start of 2020 I started investing in projects on the Binance Smart Chain, and soon after got the idea to make my own website that keeps track of a wallet address. I knew I needed to interact with the BscScan explorer, and so started writing classes to do this.</p>
+<p>Quickly, I found that their API was not designed in the best way (incorrect use of status codes, json data was formatted in a strange way), and so knew my code was going to be messy.</p>
+<p>I looked through the NuGet package library, and found that there were no .NET libraries that interacted with the BscScan explorer.</p>
+<figure class="center">
+    
+        <img src="/img/bscscanner/bscscan-nuget.png"   />
+    
+
+    
+        <figcaption style="font-style:italic">The other two packages were not available at the time of creating BscScanner</figcaption>
+    
+</figure>
+
+<p>So, I decided to task myself with creating it myself, bearing in mind, I had never made one before.</p>
+<h3 id="what">What</h3>
+<p>The library needed to solve the problem of getting data from the blockchain:</p>
+<ul>
+<li>API Mapping - Map a URL endpoint to a callable, awaitable method in C#.</li>
+<li>Asynchronous methods - Web requests take time, and so awaiting the task prevents blocking of the main thread.</li>
+<li>Dependency Injection - I wanted to use this in an ASP.NET Core project, which relies heavily on DI to function.</li>
+</ul>
+<h3 id="how">How</h3>
+<p>The whole library revolves around a class and interface. The user of the library only has to reference the interface in their code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> IBscScanClient {
+    Task&lt;<span style="color:#66d9ef">float</span>&gt; GetBnbBalanceSingleAsync(<span style="color:#66d9ef">string</span> address);
+    Task&lt;IEnumerable&lt;BscBalance&gt;&gt; GetBnbBalanceMultipleAsync(IEnumerable&lt;<span style="color:#66d9ef">string</span>&gt; addresses);
+    Task&lt;IEnumerable&lt;BscTransaction&gt;&gt; GetTransactionsByAddress(<span style="color:#66d9ef">string</span> address, <span style="color:#66d9ef">int</span> startBlock = <span style="color:#ae81ff">1</span>, <span style="color:#66d9ef">int</span> endBlock = <span style="color:#ae81ff">99999999</span>);
+    Task&lt;IEnumerable&lt;BscTransaction&gt;&gt; GetTransactionsByHash(<span style="color:#66d9ef">string</span> hash);
+    Task&lt;IEnumerable&lt;BscTransaction&gt;&gt; GetTransactionsByBlockRange(<span style="color:#66d9ef">int</span> startBlock = <span style="color:#ae81ff">1</span>, <span style="color:#66d9ef">int</span> endBlock = <span style="color:#ae81ff">99999999</span>);
+    Task&lt;IEnumerable&lt;BscTransaction&gt;&gt; GetBep20TokenTransferByContractAddress(<span style="color:#66d9ef">string</span> contract);
+    Task&lt;IEnumerable&lt;BscTransaction&gt;&gt; GetBep20TokenTransfersByAddress(<span style="color:#66d9ef">string</span> address = <span style="color:#66d9ef">null</span>, <span style="color:#66d9ef">string</span> contractAddress = <span style="color:#66d9ef">null</span>);
+    Task&lt;IEnumerable&lt;BscTransaction&gt;&gt; GetErc721TokenTransfersByAddress(<span style="color:#66d9ef">string</span> address = <span style="color:#66d9ef">null</span>, <span style="color:#66d9ef">string</span> contractAddress = <span style="color:#66d9ef">null</span>);
+    Task&lt;IEnumerable&lt;BscTransaction&gt;&gt; GetErc721TokenTransferByContractAddress(<span style="color:#66d9ef">string</span> contract);
+    Task&lt;IEnumerable&lt;BscBlock&gt;&gt; GetBlocksValidatedByAddress(<span style="color:#66d9ef">string</span> address);
+    Task&lt;<span style="color:#66d9ef">string</span>&gt; GetAbiFromSourceAddress(<span style="color:#66d9ef">string</span> address);
+    Task&lt;IEnumerable&lt;BscContract&gt;&gt; GetSourceCodeFromSourceAddress(<span style="color:#66d9ef">string</span> address);
+    Task&lt;BscTxStatus&gt; GetTransactionReceiptStatus(<span style="color:#66d9ef">string</span> txHash);
+    Task&lt;BscBlockReward&gt; GetBlockRewardByBlock(<span style="color:#66d9ef">int</span> block);
+    Task&lt;BscBlockCountdown&gt; GetBlockCountdownByBlock(<span style="color:#66d9ef">int</span> block);
+    Task&lt;<span style="color:#66d9ef">int</span>&gt; GetBlockNumberByTimestamp(DateTime time);
+    Task&lt;<span style="color:#66d9ef">int</span>&gt; GetBlockNumberByTimestamp(<span style="color:#66d9ef">long</span> unixTime);
+    Task&lt;<span style="color:#66d9ef">int</span>&gt; GetLatestBlock();
+    Task&lt;<span style="color:#66d9ef">double</span>&gt; GetTokenTotalSupply(<span style="color:#66d9ef">string</span> address);
+    Task&lt;<span style="color:#66d9ef">double</span>&gt; GetTokenCirculatingSupply(<span style="color:#66d9ef">string</span> address);
+    Task&lt;<span style="color:#66d9ef">double</span>&gt; GetAccountBalanceByContractAddress(<span style="color:#66d9ef">string</span> contractAddress, <span style="color:#66d9ef">string</span> accountAddress);
+    Task&lt;<span style="color:#66d9ef">double</span>&gt; GetBnbTotalSupply();
+    Task&lt;IEnumerable&lt;BscValidator&gt;&gt; GetBscValidators();
+    Task&lt;BscBnbPrice&gt; GetBnbLastPrice();
+}
+</code></pre></div><p>Each method invokes its subsequent web request and returns the formatted result:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">async</span> Task&lt;<span style="color:#66d9ef">float</span>&gt; GetBnbBalanceSingleAsync(<span style="color:#66d9ef">string</span> address) {
+    <span style="color:#66d9ef">var</span> url = <span style="color:#e6db74">$&#34;https://api.bscscan.com/api?module=account&amp;action=balance&amp;address={address}&amp;tag=latest&amp;apikey={_apiKey}&#34;</span>;
+    <span style="color:#66d9ef">var</span> obj = <span style="color:#66d9ef">await</span> Get&lt;BscBalanceSingleSchema&gt;(_client, url);
+
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">float</span>.Parse(obj.Result);
+}
+</code></pre></div><p>You may notice that I have to use <code>float.Parse(obj.Result)</code> to obtain the float value from the <code>BscBalanceSingleSchema</code>, which is due to the fact that BscScan returns everything as string, even though JSON supports int and floats. Annoying!</p>
+]]></content></item><item><title>Decay</title><link>https://new.ruffles.pw/project/decay/</link><pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate><guid>https://new.ruffles.pw/project/decay/</guid><description/><content type="html"></content></item><item><title>Illusive</title><link>https://new.ruffles.pw/project/illusive/</link><pubDate>Wed, 22 Dec 2021 00:00:00 +0000</pubDate><guid>https://new.ruffles.pw/project/illusive/</guid><description/><content type="html"></content></item><item><title>Fusion Karts</title><link>https://new.ruffles.pw/project/fusion-karts/</link><pubDate>Thu, 09 Dec 2021 00:00:00 +0000</pubDate><guid>https://new.ruffles.pw/project/fusion-karts/</guid><description>Introduction Fusion Karts is an arcade style karting game designed and created by Daniel, Hucota and Me. It is influenced by the Mario Kart franchise, and supports multiplayer and game controllers.
+The project sample can be found here: https://doc.photonengine.com/en-us/fusion/current/samples/game-samples/fusion-karts
+The Story It started off when I saw that Dan and Hucota were looking for somebody to help with adding multiplayer to their game. Since I had past experience in multiplayer programming, I took the job.</description><content type="html"><![CDATA[<h3 id="introduction">Introduction</h3>
+<p>Fusion Karts is an arcade style karting game designed and created by <strong>Daniel, Hucota and Me</strong>. It is influenced by the Mario Kart franchise, and <strong>supports multiplayer and game controllers</strong>.</p>
+<p>The project sample can be found here: <a href="https://doc.photonengine.com/en-us/fusion/current/samples/game-samples/fusion-karts">https://doc.photonengine.com/en-us/fusion/current/samples/game-samples/fusion-karts</a></p>
+<h3 id="the-story">The Story</h3>
+<p>It started off when I saw that Dan and Hucota were looking for somebody to help with adding multiplayer to their game. Since I had past experience in multiplayer programming, I took the job. We started with <a href="https://www.photonengine.com/bolt">Photon Bolt</a> as our networking solution, as I was most familiar with Bolt.</p>
+<p>As time progressed, we found out that the physics simulation in Bolt wasn&rsquo;t up to spec with what we wanted. When the player&rsquo;s kart would collide with other karts, it would jitter and cause all sorts of issues which even the developers of Bolt couldn&rsquo;t help us with.</p>
+<p>Nonetheless, we progressed through with the migration and had a few playtests. Not everything worked, but we got driving networked. This was one of our first running instances:</p>
+<p><img src="/img/fusion-kart/bolt-first-playtest.gif" alt="Gif of Kart Bolt playtest"></p>
+<p>It was about this time that one of the Photon team suggested to us that we use their new networking package, <a href="https://doc.photonengine.com/en-us/fusion/current/getting-started/fusion-intro">Photon Fusion</a>, and that they would pay us to create a sample for them to put on their website! Bingo! They promised better physics interactions, and easier workflow, and of course, we took the offer.</p>
+<p>This was new technology to us, and so we had to get used to this new workflow. It was quite different to Bolt, however it was trivial to get a test project working + we even got a physic test working on the first day.</p>
+<p><img src="/img/fusion-kart/fusion-first-playtest.gif" alt="Gif of first Fusion Kart playtest">
+<img src="/img/fusion-kart/fusion-coin-and-bananas.gif" alt="Gif of second Fusion Kart playtest"></p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/QRvlgWAnaks" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+]]></content></item><item><title>GetChain</title><link>https://new.ruffles.pw/project/getchain/</link><pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate><guid>https://new.ruffles.pw/project/getchain/</guid><description/><content type="html"></content></item></channel></rss>
