@@ -16,6 +16,10 @@ type: "project"
 
 **Please Note**: This project did not get finished. [See more here](#the-downfall)
 
+## TL;DR
+
+Decay is an open-world multiplayer low-poly game designed and programmed by myself. Some of the features include a modular building system, persistent saving, 
+
 ## The Beginning
 
 One of my favourite games when I was 16 was [Rust](https://store.steampowered.com/app/252490/Rust/), an open-world survival game where you fight other players and raid their bases to gain items. Coincidentally the style of the game is very close to how I wanted to make my dream game.
