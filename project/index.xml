@@ -67,8 +67,10 @@ BscScanner - The core library containing all methods pertaining to the BscScan A
 }
 </code></pre></div><p>You may notice that I have to use <code>float.Parse(obj.Result)</code> to obtain the float value from the <code>BscBalanceSingleSchema</code>, which is due to the fact that BscScan returns everything as string, even though JSON supports int and floats. Annoying!</p>
 ]]></content></item><item><title>Decay</title><link>https://ruffles.pw/project/decay/</link><pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate><guid>https://ruffles.pw/project/decay/</guid><description>Please Note: This project did not get finished. See more here
-The Beginning One of my favourite games when I was 16 was Rust, an open-world survival game where you fight other players and raid their bases to gain items. Coincidentally the style of the game is very close to how I wanted to make my dream game.
-As a hobbyist game developer, it was always interesting looking at the underlying source code of Unity games to see how popular games worked.</description><content type="html"><![CDATA[<p><strong>Please Note</strong>: This project did not get finished. <a href="#the-downfall">See more here</a></p>
+TL;DR Decay is an open-world multiplayer low-poly game designed and programmed by myself. Some of the features include a modular building system, persistent saving,
+The Beginning One of my favourite games when I was 16 was Rust, an open-world survival game where you fight other players and raid their bases to gain items. Coincidentally the style of the game is very close to how I wanted to make my dream game.</description><content type="html"><![CDATA[<p><strong>Please Note</strong>: This project did not get finished. <a href="#the-downfall">See more here</a></p>
+<h2 id="tldr">TL;DR</h2>
+<p>Decay is an open-world multiplayer low-poly game designed and programmed by myself. Some of the features include a modular building system, persistent saving,</p>
 <h2 id="the-beginning">The Beginning</h2>
 <p>One of my favourite games when I was 16 was <a href="https://store.steampowered.com/app/252490/Rust/">Rust</a>, an open-world survival game where you fight other players and raid their bases to gain items. Coincidentally the style of the game is very close to how I wanted to make my dream game.</p>
 <p>As a hobbyist game developer, it was always interesting looking at the underlying source code of Unity games to see how popular games worked. You can use tools such as <a href="https://www.jetbrains.com/decompiler/">JetBrains dotPeek</a> to decompile C# DLL libraries, which is what non-IL2CPP Unity games build to.</p>
@@ -227,4 +229,45 @@ The Story It started off when I saw that Dan and Hucota were looking for somebod
   <iframe src="https://www.youtube.com/embed/QRvlgWAnaks" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-]]></content></item><item><title>GetChain</title><link>https://ruffles.pw/project/getchain/</link><pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate><guid>https://ruffles.pw/project/getchain/</guid><description/><content type="html"></content></item></channel></rss>
+]]></content></item><item><title>GetChain</title><link>https://ruffles.pw/project/getchain/</link><pubDate>Sun, 10 Oct 2021 00:00:00 +0000</pubDate><guid>https://ruffles.pw/project/getchain/</guid><description>GetChain is deployed to https://getchain.dev/{:target=&amp;rdquo;_blank&amp;rdquo;}.
+The source code is here: https://github.com/pippinmole/getchain/{:target=&amp;rdquo;_blank&amp;rdquo;}.
+TL;DR GetChain aggregates the API endpoints of these blockchains under a single domain:
+Binance Smart Chain Ethereum Goerli Kovan Rinkeby Ropsten Technologies GetChain was written in C# using Razor Pages. I decided to use Razor Pages because I needed a framework that has a backend (for user accounts, generating and storing API keys etc).
+For the database, I pretty much always go with MongoDB because it&amp;rsquo;s a NoSQL (schema based) solution, meaning I can change a database schema and not have to rewrite any SQL statements.</description><content type="html"><![CDATA[<figure class="left">
+    
+        <img src="/img/getchain/getchain-frontpage.png"   />
+    
+
+    
+</figure>
+
+<p>GetChain is deployed to <a href="https://getchain.dev/">https://getchain.dev/</a>{:target=&rdquo;_blank&rdquo;}.<br>
+The source code is here: <a href="https://github.com/pippinmole/getchain/">https://github.com/pippinmole/getchain/</a>{:target=&rdquo;_blank&rdquo;}.</p>
+<h2 id="tldr">TL;DR</h2>
+<p>GetChain aggregates the API endpoints of these blockchains under a single domain:</p>
+<ul>
+<li>Binance Smart Chain</li>
+<li>Ethereum</li>
+<li>Goerli</li>
+<li>Kovan</li>
+<li>Rinkeby</li>
+<li>Ropsten</li>
+</ul>
+<h2 id="technologies">Technologies</h2>
+<p>GetChain was written in C# using <a href="https://docs.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-6.0">Razor Pages</a>. I decided to use Razor Pages because I needed a framework that has a backend (for user accounts, generating and storing API keys etc).</p>
+<p>For the database, I pretty much always go with <a href="https://www.mongodb.com/">MongoDB</a> because it&rsquo;s a NoSQL (schema based) solution, meaning I can change a database schema and not have to rewrite any SQL statements.</p>
+<h2 id="usage">Usage</h2>
+<p>The front-end doesn&rsquo;t need to do anything but allow a user to create an account and generate an API key, so it&rsquo;s relatively simple.</p>
+<h4 id="creating-an-api-key">Creating an API key</h4>
+<p><img src="/img/getchain/creating-api-key.gif" alt="Creating an API key"></p>
+<h4 id="using-the-api">Using the API</h4>
+<p>The homepage shows how to use the API in your program:</p>
+<figure class="left">
+    
+        <img src="/img/getchain/how-to-use-api.png"   />
+    
+
+    
+</figure>
+
+]]></content></item></channel></rss>
