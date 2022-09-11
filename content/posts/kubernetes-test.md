@@ -1,5 +1,5 @@
 ---
-categories: ["Blog"]
+categories: ["Kubernetes"]
 date: "2022-09-11"
 description: "My experience learning K8s + DigitalOcean"
 featured: "/me.jpg"

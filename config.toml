@@ -75,4 +75,4 @@ paginate     = 10
   [[menu.main]]
     identifier = "Blog"
     name    = "Blog"
-    url        = "/blog"
+    url        = "/posts"
