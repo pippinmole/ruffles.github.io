@@ -71,3 +71,8 @@ paginate     = 10
     identifier = "Resume"
     name    = "Resumé"
     url        = "/cv.pdf"
+
+  [[menu.main]]
+    identifier = "Blog"
+    name    = "Blog"
+    url        = "/blog"
