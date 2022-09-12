@@ -10,4 +10,7 @@ The Story It started off when I saw that Dan and Hucota were looking for somebod
 The source code is here: https://github.com/pippinmole/getchain/{:target=&amp;rdquo;_blank&amp;rdquo;}.
 TL;DR GetChain aggregates the API endpoints of these blockchains under a single domain:
 Binance Smart Chain Ethereum Goerli Kovan Rinkeby Ropsten Technologies GetChain was written in C# using Razor Pages. I decided to use Razor Pages because I needed a framework that has a backend (for user accounts, generating and storing API keys etc).
-For the database, I pretty much always go with MongoDB because it&amp;rsquo;s a NoSQL (schema based) solution, meaning I can change a database schema and not have to rewrite any SQL statements.</description></item></channel></rss>
+For the database, I pretty much always go with MongoDB because it&amp;rsquo;s a NoSQL (schema based) solution, meaning I can change a database schema and not have to rewrite any SQL statements.</description></item><item><title>Should you get started with ASP.NET Core?</title><link>https://ruffles.pw/posts/aspnetcore-first-look/</link><pubDate>Wed, 25 Nov 2020 00:00:00 +0000</pubDate><guid>https://ruffles.pw/posts/aspnetcore-first-look/</guid><description>NOTE: This post is ported from Illusive. You can find it here.
+tl;dr: It&amp;rsquo;s pretty cool you should try it
+Web development in C# (while I understand why some people hate it), is actually quite a painless process, everything seems to fit together nicely if you understand most of the concepts before starting a project.
+In fact, I got this forum working relatively easily using just the docs and a little help from some experienced users of the framework.</description></item></channel></rss>
