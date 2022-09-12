@@ -11,6 +11,8 @@ slug: "learning-k8s"
 type: "project"
 ---
 
+{{< image src="/img/blog/kubernetes-test/k8s-overview.png" style="height:300px;width:auto" position="center" figure="" >}}
+
 ## Introduction
 
 [Kubernetes](https://kubernetes.io/) is an open-source tool predominantly used by big tech companies to scale and manage their applications. 
