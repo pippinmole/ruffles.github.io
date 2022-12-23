@@ -11,6 +11,8 @@ slug: "hugo-portfolio"
 type: "project"
 ---
 
+{{<image src="/img/blog/using-hugo/hugo_logo.png" style="width:95%">}}
+
 ## Why Hugo?
 
 If you choose to build your portfolio site using only HTML and CSS, you may run into the issue of repetitive code.
