@@ -33,12 +33,12 @@ If you don't want to read on and simply want the results, here they are:
 
 | **Language** 	| **1**   	| **100**   	| **10,000**    	| **1,000,000**   	| **100,000,000**     	|
 |--------------	|---------	|-----------	|---------------	|-----------------	|---------------------	|
-| Python       	| 614.16 ns | 70,653.38 ns  | 9,780,469.12 ns  	| 889,441,796.00 ns | 90,486,564,681.200 ns |
-| JavaScript   	|         	|           	|               	|                 	|                     	|
-| Java         	|         	|           	|               	|                 	|                     	|
-| Golang       	| 17.54 ns  | 2397.00 ns    | 170,880.00 ns     | 18,716,736.00 ns  | 2,062,528,239.00 ns   |
-| C#           	| 27.33 ns 	| 890.95 ns 	| 102,216.59 ns 	| 9,748,457.98 ns 	| 1,098,015,650.97 ns 	|
-| Haskell      	|         	|           	|               	|                 	|                     	|
+| Python       	| 614.16 ns | 0.0706 ms     | 9.7805 ms  	    | 889.4418 ms       | 90.4866 s             |
+| JavaScript   	|  -       	| -          	| -              	| -                	| -                    	|
+| Golang       	| 17.54 ns  | 2397.00 ns    | 0.1709 ms         | 18.7167 ms        | 2.0625 s              |
+| C#           	| 27.33 ns 	| 890.95 ns 	| 0.1022 ms 	    | 9.7485 ms 	    | 1.0980 s 	            |
+<!-- | Java         	|         	|           	|               	|                 	|                     	| -->
+<!-- | Haskell      	|         	|           	|               	|                 	|                     	| -->
 
 ### Python
 
@@ -60,8 +60,8 @@ For my benchmarking library I used [Benchmark.NET](https://github.com/dotnet/Ben
 
 {{<image src="/img/blog/benchmarking-languages/csharp-results.png" position="center" figure="Results of running GetPrimes" >}}
 
-### Haskell
+<!-- ### Haskell
 
-[Criterion](https://hackage.haskell.org/package/criterion)
+[Criterion](https://hackage.haskell.org/package/criterion) -->
 
 ## Notes about benchmarking
