@@ -1,5 +1,5 @@
 ---
-categories: ["Vue.js", "React", "Web Development"]
+tags: ["Vue.js", "React", "Web Development"]
 date: "2022-12-21"
 description: "My experience with Vue and React"
 featured: "/me.jpg"
