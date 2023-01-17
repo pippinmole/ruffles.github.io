@@ -14,7 +14,7 @@ BscScanner - The core library containing all methods pertaining to the BscScan A
 <p>I looked through the NuGet package library, and found that there were no .NET libraries that interacted with the BscScan explorer.</p>
 <figure class="center">
     
-        <img src="/img/bscscanner/bscscan-nuget.png"   />
+        <img src="/img/bscscanner/bscscan-nuget.png"    />
     
 
     
@@ -76,7 +76,7 @@ The Beginning One of my favourite games when I was 16 was Rust, an open-world su
 <p>As a hobbyist game developer, it was always interesting looking at the underlying source code of Unity games to see how popular games worked. You can use tools such as <a href="https://www.jetbrains.com/decompiler/">JetBrains dotPeek</a> to decompile C# DLL libraries, which is what non-IL2CPP Unity games build to.</p>
 <figure class="left">
     
-        <img src="/img/decay/jetbrains-dotpeek-assembly.png"   />
+        <img src="/img/decay/jetbrains-dotpeek-assembly.png"    />
     
 
     
@@ -87,7 +87,7 @@ The Beginning One of my favourite games when I was 16 was Rust, an open-world su
 <p>I used <a href="https://www.blender.org/">Blender</a> to create all my 3D models, mainly because it is simple to use and free to use. As Decay was a survival game, I decided to create models in order of how the game would progress (wood, stone THEN metal). This means I needed a tree.</p>
 <figure class="left">
     
-        <img src="/img/decay/decay-tree-1.png"   style="height:300px"  />
+        <img src="/img/decay/decay-tree-1.png"    style="height:300px"  />
     
 
     
@@ -96,7 +96,7 @@ The Beginning One of my favourite games when I was 16 was Rust, an open-world su
 <p>Hmm&hellip; Not enough variation&hellip; More tree.</p>
 <figure class="left">
     
-        <img src="/img/decay/decay-tree-2.png"   style="height:300px"  />
+        <img src="/img/decay/decay-tree-2.png"    style="height:300px"  />
     
 
     
@@ -113,7 +113,7 @@ The Beginning One of my favourite games when I was 16 was Rust, an open-world su
 </ul>
 <figure class="left">
     
-        <img src="/img/decay/decay-modelshowcase.png"   />
+        <img src="/img/decay/decay-modelshowcase.png"    />
     
 
     
@@ -129,7 +129,7 @@ The Beginning One of my favourite games when I was 16 was Rust, an open-world su
 <p>Bolt makes it really easy for you to implement multiplayer into a game. They support input commands, much like many of the Source projects do. This means that instead of synchronising a position every tick, you synchronise inputs and infer the positions from the inputs:</p>
 <figure class="left">
     
-        <img src="/img/decay/decay-commands.png"   />
+        <img src="/img/decay/decay-commands.png"    />
     
 
     
@@ -187,7 +187,7 @@ The Beginning One of my favourite games when I was 16 was Rust, an open-world su
 
 <p><figure class="left">
     
-        <img src="/img/decay/decay-mainmenu.png"   />
+        <img src="/img/decay/decay-mainmenu.png"    />
     
 
     
@@ -202,7 +202,7 @@ The Beginning One of my favourite games when I was 16 was Rust, an open-world su
 </video>
 <figure class="left">
     
-        <img src="/img/decay/human-aiming.gif"   />
+        <img src="/img/decay/human-aiming.gif"    />
     
 
     
@@ -235,7 +235,7 @@ TL;DR GetChain aggregates the API endpoints of these blockchains under a single 
 Binance Smart Chain Ethereum Goerli Kovan Rinkeby Ropsten Technologies GetChain was written in C# using Razor Pages. I decided to use Razor Pages because I needed a framework that has a backend (for user accounts, generating and storing API keys etc).
 For the database, I pretty much always go with MongoDB because it&amp;rsquo;s a NoSQL (schema based) solution, meaning I can change a database schema and not have to rewrite any SQL statements.</description><content type="html"><![CDATA[<figure class="left">
     
-        <img src="/img/getchain/getchain-frontpage.png"   />
+        <img src="/img/getchain/getchain-frontpage.png"    />
     
 
     
@@ -264,7 +264,7 @@ The source code is here: <a href="https://github.com/pippinmole/getchain/">https
 <p>The homepage shows how to use the API in your program:</p>
 <figure class="left">
     
-        <img src="/img/getchain/how-to-use-api.png"   />
+        <img src="/img/getchain/how-to-use-api.png"    />
     
 
     
