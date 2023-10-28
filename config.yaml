@@ -1,0 +1,329 @@
+baseURL: "https://hugo-profile.netlify.app"
+languageCode: "en-us"
+title: "Jonathan Ruffles"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+Paginate: 6
+enableRobotsTXT: true
+# disqusShortname: your-disqus-shortname
+# googleAnalytics: G-MEASUREMENT_ID
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: blog
+      name: Blog
+      title: Blog posts
+      url: /posts
+      weight: 1
+
+params:
+  title: "Jonathan Ruffles' Blog"
+  description: Check out what I've been working on recently.
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "/favicon.ico"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # color:
+  #   textColor:
+  #   secondaryTextColor:
+  #   backgroundColor:
+  #   secondaryBackgroundColor:
+  #   primaryColor:
+  #   secondaryColor:
+
+  #   darkmode:
+  #     textColor:
+  #     secondaryTextColor:
+  #     backgroundColor:
+  #     secondaryBackgroundColor:
+  #     primaryColor:
+  #     secondaryColor:
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "Jonny's Blog" # Brand name for the brand | default is the title variable
+    disableSearch: false
+    # searchPlaceholder: "Search"
+    menus:
+      disableAbout: true
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Jonny."
+    subtitle: "I build computer things"
+    content: "A passionate full stack web and application developer who is always learning new tech. Currently employed at IBD Registry."
+    image: /img/me.jpg
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: true
+      name: "Resume"
+      url: "cv.pdf"
+      download: false
+      newPage: true
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/pippinmole
+        - icon: fab fa-twitter
+          url: https://twitter.com/pippinmole
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/jonathan-ruffles/
+
+  # About
+  about:
+    enable: false
+    title: "About Me"
+    image: "/img/me.jpg"
+    content: |-
+      I am a software developer with a passion for web development, with a background in computer science. Currently working as a software developer at [IBD Registry](https://ibdregistry.org.uk/).
+
+      Currently working on a project that will speed up CSV parsing in .NET by using source generators.
+    skills:
+      enable: true
+      title: "Here are a few technologies I've recently been using at work and personally:"
+      items:
+        - "ASP.NET Core"
+        - "Postgres (with EFCore)"
+        - "Terraform"
+        - "Next.JS"
+        - "Docker"
+        - "RabbitMQ + MassTransit"
+
+  # Experience
+  experience:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - job: "Junior Software Developer"
+        company: "IBD Registry"
+        companyUrl: "https://ibdregistry.org.uk/"
+        date: "June 2023 - present"
+        featuredLink:
+          enable: false
+          name: "View the project"
+          url: "https://example.com"
+        content: |
+          - Deploying and maintaining both Windows and Linux servers.
+          - Designing, writing and testing a scalable ETL application using .NET, transforming clinical data inputs for analytical purposes.
+          - Demonstrating use of Terraform to deploy internal company resources to Microsoft Azure
+          - Analysing and deploying the relevant measures to avoid unauthorized access to patient-identifiable data.        
+
+
+      - job: "Contractor Game Developer"
+        company: "Exit Games"
+        companyUrl: "https://doc.photonengine.com/fusion/current/game-samples/fusion-karts"
+        date: "Sep 2020 - Dec 2021"
+        featuredLink:
+          enable: false
+          url: "https://example.com"
+        info:
+          enable: false
+          content: .
+        content: |
+          - Created an official Fusion multiplayer game sample to be used as a foundation and reference point for Fusion product customers
+          - Worked as a team of 3 to communicate with and meet the client's needs in a timely manner
+          - Lead the implementation of a multiplayer solution to an existing singleplayer game through refactoring
+
+  # Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "BENG Software Engineering with Year in Industry"
+        school:
+          name: "University of Sheffield, Sheffield"
+          url: "https://www.sheffield.ac.uk/"
+        date: "2021 - 2025"
+        GPA: "2:1"
+        content: |-
+            - INTRODUCTION TO SOFTWARE ENGINEERING [1:1]
+            - FOUNDATIONS OF COMPUTER SCIENCE [2:2]
+            - JAVA PROGRAMMING [1:1]
+            - WEB AND INTERNET TECHNOLOGY [2:1]
+            - GLOBAL ENGINEERING CHALLENGE [Distinction]
+
+  # Achievements
+  achievements:
+    enable: false
+    # title: "Custom Name"
+    items:
+      - title: Google kickstart runner
+        content: I solved all problems with optimal solution.
+        url: https://example.com
+        image: /images/achievment.jpg
+      - title: Facebook Hackathon Winner
+        content: Developed a product using Artificial Intelligence.
+        image: /images/achievment.jpg
+      - title: Hugo Profile
+        content: Developed a theme and getting 1K+ downloads per month.
+        url: "https://github.com/gurusabarish/hugo-profile"
+        image: /images/achievment.jpg
+      - title: Microsoft Imagine Runner
+        content: We are developed a product which can help others.
+      - title: Google Summer of Code
+        content: Contributed to a open source project.
+        url: https://example.com
+
+  # projects
+  projects:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: BscScanner
+        content: A .NET library which wraps the BscScan API. Officially supported by BscScan.
+        image: /img/bscscanner/bscscanner.png
+        badges:
+          - ".NET"
+          - "Library"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/pippinmole/BscScanner
+
+      - title: regp
+        content: A simple Go CLI tool to match regular expressions 
+        image: /img/regp/regp.bmp
+        badges:
+          - "Golang"
+          - "CLI"
+          - "Tools"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/pippinmole/regp
+
+      - title: Grattify.io
+        content: A Next.js web app that allows you to post about something you are grateful for every 24 hours. 
+        image: /img/grattify/homepage.png
+        featured:
+          name: View Demo
+          link: "https://grattify.io/"
+        badges:
+          - "Next.JS"
+          - "Frontend"
+          - "Web"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/pippinmole/regp
+
+      - title: Decay
+        content: An open-world multiplayer low-poly game designed and programmed by myself. Some of the features include a modular building system, persistent saving, 
+        image: /img/decay/decay-mainmenu.png
+        badges:
+          - "Game Dev"
+          - "Unity"
+        # links:
+        #   - icon: fab fa-github
+        #     url: https://grattify.io/
+
+      - title: GetChain
+        content:  Monitor your Helium miners' uptime and get notified when they go down! 
+        image: /img/getchain/getchain-frontpage.png
+        badges:
+          - ".NET"
+          - "Web"
+          - "Javascript"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/pippinmole/GetChain
+
+  #Contact
+  contact:
+    enable: false
+    # title: "Custom Name"
+    content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+    email: gurusabarisha@gmail.com
+    btnName: Mail me
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 8
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com/pippinmole
+      linkedin: https://www.linkedin.com/in/jonathan-ruffles/
+      twitter: https://twitter.com/pippinmole
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>
