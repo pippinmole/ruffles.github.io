@@ -55,6 +55,7 @@ header .navbar.animate {
     animation: fade-up 0.5s ease-in;
 }
 
+
 /* ToolTip */
 
 .tooltip {
@@ -175,7 +176,7 @@ header .navbar.animate {
 #hero .hero-content > a {
     display: inline-block;
     text-decoration: none;
-    color: var(--text-link-color) !important;
+    color: var(--primary-color) !important;
 }
 
 #hero .hero-content > a::after {
@@ -243,7 +244,7 @@ header .navbar.animate {
 #about a {
     display: inline-block;
     text-decoration: none;
-    color: var(--text-link-color) !important;
+    color: var(--primary-color) !important;
 }
 
 #about a::after {
@@ -322,7 +323,7 @@ header .navbar.animate {
     opacity: 0.9;
     display: inline-block;
     text-decoration: none;
-    color: var(--text-link-color) !important;
+    color: var(--primary-color) !important;
 }
 
 #experience a::after {
@@ -432,7 +433,7 @@ header .navbar.animate {
 }
 
 #education .card .card-body .education-content a {
-    color: var(--text-link-color) !important;
+    color: var(--primary-color) !important;
     text-decoration: none;
     opacity: 0.9;
 }
@@ -440,7 +441,7 @@ header .navbar.animate {
 #education .card .card-body > a h6 {
     display: inline-block;
     text-decoration: none;
-    color: var(--text-link-color) !important;
+    color: var(--primary-color) !important;
 }
 
 #education .card .card-body > a h6::after {
